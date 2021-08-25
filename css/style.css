@@ -1,0 +1,898 @@
+
+
+#header{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../img/parallax-2.jpg') ;
+    min-height: 115vh;
+    background-size: cover;
+    background-position: center ;
+    position: relative;
+
+}
+/* -------------------------sidebar------------------------- */
+.sidebar{
+    width: 360px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 2;
+    transform: translateX(100%);
+    padding: 30px 40px ;
+    overflow-y: scroll;
+    transition: 0.8s;
+    box-shadow: 0 0 2px #ccc;
+}
+
+.sidebar.active{
+    transform: translateX(0);
+}
+.sidebar__close-icon{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sidebar__close-icon img{
+    width: 100%;
+}
+
+
+
+.sidebar__heading{
+    font-size: 14px;
+    color: #9a9a9a;
+    text-align: center;
+}
+
+.sidebar__title{
+    font-size: 25px;
+    color: #555555;
+    text-align: center;
+}
+.sidebar__tours{
+    margin-bottom: 50px;
+}
+
+.sidebar__tour{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.sidebar__tour-img{
+    width: 100px;
+}
+.sidebar__tour__content{
+    width: 135px;
+}
+
+.sidebar__tour-name a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.1;
+}
+
+.sidebar__tour-site a{
+    display: block;
+    font-size: 15px;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+.sidebar__tour-icon{
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.sidebar__tour-btn{
+    width: 130px;
+    color: #fff;
+   
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+.sidebar_menu{
+    display: none;
+}
+
+.main-menu{
+    list-style: none;
+}
+
+.main-menu a{
+    text-decoration: none;
+    display:block;
+    color: #fff;
+}
+
+.main-menu ul{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+.main-menu ul li{
+    padding: 5px 0;
+}
+/* -------------------- sidebar destination------------------------- */
+.destination{
+    width: 262px;
+    height: 262px;
+    position: relative;
+}
+
+.destination-item:hover .destination_slice-above,
+.destination:hover .destination_slice-above{
+    opacity: 1;
+}
+
+.destination_slide-under{
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    background:  linear-gradient(to top,rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url('../img/destination-9.jpg');
+    background-size: cover;
+}
+
+.destination__icon{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 35px;
+    height: 35px;
+    z-index: 0;
+}
+
+.destination__icon img{
+    width: 100%;
+}
+
+.destination__content{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+
+
+.destination__heading{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.destination_slice-above{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #14b9d5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: 45px 30px;
+    text-align: center;
+    color: #fff;
+    transition: 1s;
+  
+}
+
+.destination__title{
+    font-size: 25px;
+
+}
+.destination__site{
+    font-size: 16px;
+    margin-top: 5px;
+}
+.destination__site a{
+    text-decoration: none;
+    color: #fff;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+.destination-btn{
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 15px;
+    color: #14b9d5;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+/* -------------------header navigation------------- */
+.header__navigation{
+    min-height: 104px;
+    background:rgba(0, 0, 0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+    
+}
+
+.header__logo{
+    display: inline-block;
+    width: 160px;
+
+}
+
+.header__logo img{
+    width: 100%;
+}
+
+.header__menu{
+    flex: 1;
+    margin-left: 50px;
+}
+
+.header__menu-item{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.header__menu-item:hover>.submenu{
+    display: block;
+}
+
+.header__menu-item>a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 25px 15px; 
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.header__menu-item:last-child>a{
+   
+    text-decoration: none;
+    padding: 10px 15px;
+    background: #ba71da;
+    border-radius: 50px;
+    margin-left: 15px;
+    letter-spacing: 2px;
+}
+
+.submenu{
+    display: none;
+    width: 190px;
+    list-style: none;
+    color: #ccc;
+    background: #fff;
+    box-shadow: 0 0 5px #fff;
+    z-index: 2;
+
+}
+
+.connect-submenu::before{
+    content: '';
+    width: 20%;
+    background: transparent;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    z-index: -1;
+}
+
+.submenu-item{
+    padding:15px 20px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.submenu-item:hover>.submenu{
+    display: block;
+}
+
+.submenu-item:hover{
+    background: #f9f9f9;
+}
+
+.submenu-item>a{
+    text-decoration: none;
+    display: block;
+    color: #9a9a9a;
+    font-size: 14px;
+    position: relative;
+}
+
+.label-hot>a::after{
+    content: 'HOT';
+    position: absolute;
+    top:3px;
+    right: 0;
+    padding: 3px 5px;
+    line-height: 1.1;
+    background: #f76570;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 3px;
+}
+
+.label-new>a::after{
+    content: 'NEW';
+    position: absolute;
+    top:3px;
+    right: 0;
+    padding: 3px 5px;
+    line-height: 1.1;
+    background: #1bbc9b;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 3px;
+}
+.label-arrow>a::after{
+    display: inline-block;
+    content: '\f0da';
+    font-family:  "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top:5px;
+    right: 0;
+}
+.label-best>a::after{
+    content: 'BEST';
+    position: absolute;
+    top:3px;
+    right: 0;
+    padding: 3px 5px;
+    line-height: 1.1;
+    background: #14b9d5;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 3px;
+}
+.header__toggle{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.header__toggle-img{
+    width: 100%;
+}
+
+/* -----------------------header content------------------------ */
+
+.header__content{
+    margin-top: 150px;
+    text-align: center;
+    color: #fff;
+}
+
+.header__heading{
+    font-size: 50px;
+}
+
+.header__desc{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-top: 15px;
+}
+
+.header_search{
+    margin-top: 60px;
+}
+
+.header-input{
+    margin: 0 auto;
+    width: 35%;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+
+.header__search-input{
+    width: 100%;
+    height: 44px;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    line-height: 44px;
+    color: #a3a3a3;
+    font-size: 15px; 
+
+}
+
+
+.header__search_icon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 11px 20px;
+    height: 44px;
+    background: #fff;
+    border: none;
+    outline: none; 
+    line-height: 44px;
+   cursor: pointer;
+}
+
+.header__search_icon img{
+    display: block;
+   width: 22px;
+   height: 22px;
+  
+}
+
+
+.header__typologies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.header__typologies_item{
+    padding: 15px;
+}
+.header__typologies_item a{
+    display: block;
+    width: 112px;
+    padding: 20px;
+    text-decoration: none;
+    background: rgba(0,0,0,0.5);
+}
+
+.header__typologies_img{
+    width:40px;
+    height: 40px;
+}
+.header__typologies_name{
+    font-size: 11px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+
+
+/* ---------------------------destination--------------------------- */
+.destinations{
+    margin-bottom: 80px;
+}
+.destination-item{
+    width: 100%;
+    position: relative;
+}
+
+.destination__item-under{
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+}
+.destination__item-under img{
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.heading{
+    font-size: 14px;
+    color: #9a9a9a;
+    letter-spacing: 2px;
+   
+}
+.title{
+    font-size: 36px;
+    line-height: 1;
+    color: #555555;
+    margin-top: 20px;
+}
+
+.destination-list{
+    margin-top: 35px;
+}
+
+/* ---------------------- packages----------------------- */
+.packages{
+    padding: 80px;
+    background: url('../img/parallax-search-2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 80px; */
+}
+
+.packages__heading{
+    font-size: 50px;
+    color: #fff;  
+    padding: 0 50px; 
+    line-height: 1.1;
+}
+
+.packages__btn{
+    padding: 20 50px;
+    
+}
+
+.packages-btn{
+    width: 240px;
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #f76570;
+    cursor: pointer;
+    background: #fff;
+    
+}
+
+
+/* -------------------book tour ------------------------ */
+.booktour{
+    margin-top: 30px;
+}
+
+.booktour-content{
+    font-size: 15px;
+    color: #9a9a9a;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+
+.booktour-price{
+    font-size: 30px;
+    color: #555555;
+    margin-top: 30px;
+}
+
+.old-price{
+    font-size: 30px;
+    color: #dadada;
+    text-decoration: line-through solid #dadada;
+}
+
+.new-price{
+    font-size: 30px; 
+}
+
+.tour-object{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+
+.booktour-btn{
+    padding: 10px 30px;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 14px;
+    background: #1bbc9b;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    letter-spacing: 2px;
+}
+
+/* ------------------background tour-------------------- */
+
+.background__slider{
+    padding-top: 55%;
+    width: 100%;
+   background: url('../img/parallax-4.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+.background__date{
+    width: 80%;
+    background: #14b9d5;
+    margin-top: -8%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-date{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.slash{
+    position: relative;
+}
+
+.slash::after{
+    position: absolute;
+    right: 0;
+    content: '/';
+    font-size: 50px;
+    font-weight: 200;
+    color: #000;
+    opacity: 0.05;
+}
+
+.days,.hours,.minutes,.seconds{
+    font-size: 30px;
+}
+
+
+/* ------------------tour types------------------------------- */
+.tour__types{
+    margin-bottom: 80px;
+}
+.tour__types-item{
+    display: flex;
+    align-items: flex-start;
+}
+
+.tour__types-img{
+    width: 50px;
+
+}
+
+.tour__types-infor{
+    margin-left: 20px;
+    letter-spacing: 2px;
+}
+.tour__types-heading{
+    font-size: 24px;
+    color: #555555;
+}
+
+.tour__types-desc{
+    font-size: 14px;
+    color: #9a9a9a;
+    margin: 20px 0px;
+    line-height: 1.6;
+}
+
+.tour__types-detail{
+    font-size: 14px;
+    line-height: 1;
+    color: #14b9d5;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* -------------------- discover---------------------------------- */
+.discover-bg{
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover-infor{
+    text-align: center;
+    color: #fff;
+}
+.discover__heading{
+    font-size: 14px;
+    letter-spacing: 2px;
+    
+}
+.discover__title{
+    font-size: 36px;
+}
+
+.discover-btn{
+    width: 135px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    padding: 15px 35px;
+    background: #fff;
+}
+
+.promotions{
+    margin-bottom: 60px;
+}
+.promotion-item{
+    border:1px solid #ccc;
+}
+
+.promotion-img{
+    position: relative;
+}
+
+.promotion-img>img{
+    display: block;
+    width: 100%;
+}
+
+.promotion-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 12px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.promotion-icon img{
+    width: 26px;
+}
+
+.promotion-content{
+    padding: 30px;
+}
+
+.promotion-site{
+    padding-bottom: 20px;
+    border-bottom:1px solid #ccc ;
+}
+
+.promotion-desc{
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.promotion-type{
+    display: flex;
+    align-items: baseline;
+}
+
+.promotion-type a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #555555;
+    letter-spacing: 2px;
+}
+
+.label-count{
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #fff;
+    line-height: 13px;
+    margin-left: 5px;
+}
+
+
+.promotion-price{
+    display: inline-block;
+    margin-left:auto ;
+}
+.promotion-price a{
+    display: inline-block;
+    font-size: 24px;
+}
+
+.promotion-info p{
+    padding: 20px 0;
+    font-size: 14px;
+    color: #555555;
+}
+
+.promotion-btn{
+    width: 99px;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+
+/* --------------footer------------------------- */
+
+.footer{
+    background: url('../img/parallax-7.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+}
+.contact{
+    
+}
+.footer-content{
+    background: #fff;
+}
+.input-contact,
+.contact-btn{
+    width: 100%;
+    width: 100%;
+    padding:10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.contact-btn{
+    color: #fff;  
+    letter-spacing: 2px;
+}
+
+
+.footer-logo{
+    width: 150px;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+
+.footer-desc{
+    color: #9a9a9a;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.socials{
+    margin-top: 30px;
+}
+
+.socials .fab{
+    font-size: 22px;
+    color: #9a9a9a;
+    margin-right: 10px;
+}
+
+.footer-heading{
+    font-size: 14px;
+    color: #555555;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.footer-list{
+    margin-top: 30px;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+
+.copyright{
+    justify-content: space-between;
+    background: #14b9d5;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 20px;
+}
